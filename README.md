@@ -5,5 +5,3 @@ The robustness means that the routing plan to be developed should be feasible fo
 Currently, my model hedges against one uncertainty each in transportation time and demand, i.e. all scenarios are considered in which one customer deviates from the customer set and one edge deviates from the edge set. 
 
 I would now like to extend the model so that more than this one uncertainty can be considered, but have failed so far. I am therefore happy about any advice.
-
-Translated with www.DeepL.com/Translator (free version)
