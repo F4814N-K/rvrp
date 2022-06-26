@@ -1,9 +1,3 @@
-/*********************************************
- * OPL 22.1.0.0 Model
- * Author: fabia
- * Creation Date: 29.04.2022 at 16:29:00
- *********************************************/
-
 // parameters & sets
 int n = ...; // amount of customers	
 
@@ -28,7 +22,7 @@ tuple Kanten {int i ; int j;};
 // Unidirektionale Kanten
 {Kanten} A_unidirected = {<i,j> | i in N0, j in N0: i<j};
 
-// Kardinalität A_unidirected
+// KardinalitÃ¤t A_unidirected
 int cAu = card(A_unidirected);  					// amount of routes that can be delayed
 
 // Kanten-Indexmenge
@@ -67,17 +61,6 @@ float L = ...;	// uncertainty budget of demand
 float t[N0,N0] = ...;				// travel time matrix
 
 float c[N0,N0] =...;				// distance matrix
-
-/*//Anlegen von Standorten (Alternative Formulierung)
-tuple Standorte {int i; int j;}
-Standorte Punkt [N0]= ...;
-
-//Entfernung der Standorte
-execute{function Entfernung (i,j)
-		{return Opl.sqrt (Opl.pow(N0.i-N0.i,2) + Opl.pow(N0.i-N0.j,2));}
-		for (var i in N0){	for (var j in N0){
-		  c [i][j] = Entfernung (Punkt[i], Punkt[j])
-		}}}*/
 
  // optimization model
 // decision variables
